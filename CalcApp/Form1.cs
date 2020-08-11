@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CalcApp
 {
-    public partial class Form1 : Form
+    public partial class FormHomepage : Form
     {
-        public Form1()
+        public FormHomepage()
         {
             InitializeComponent();
         }
