@@ -12,9 +12,20 @@ namespace CalcApp
 {
     public partial class FormHomepage : Form
     {
+        FormAbout formAbout;
         public FormHomepage()
         {
             InitializeComponent();
+            formAbout = new FormAbout();
+            formAbout.Visible = false;
+        }
+
+        private void ButtonAboutForm_Click(object sender, EventArgs e)
+        {
+            if (formAbout.Visible == true)
+                formAbout.Visible = false;
+            else
+                formAbout.Visible = true;
         }
     }
 }
