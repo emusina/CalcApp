@@ -13,11 +13,13 @@ namespace CalcApp
     public partial class FormHomepage : Form
     {
         FormAbout formAbout;
+        FormCalculator formCalculator;
         public FormHomepage()
         {
             InitializeComponent();
             formAbout = new FormAbout();
             formAbout.Visible = false;
+            formCalculator.Visible = false;
         }
 
         private void ButtonAboutForm_Click(object sender, EventArgs e)
@@ -26,6 +28,14 @@ namespace CalcApp
                 formAbout.Visible = false;
             else
                 formAbout.Visible = true;
+        }
+
+        private void ButtonCalculatorForm_Click(object sender, EventArgs e)
+        {
+            if (formCalculator.Visible == true)
+                formCalculator.Visible = false;
+            else
+                formCalculator.Visible = true;
         }
     }
 }
