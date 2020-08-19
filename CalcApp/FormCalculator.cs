@@ -22,16 +22,8 @@ namespace CalcApp
             decimal termen1 = numericUpDownTermen1.Value;
             decimal termen2 = numericUpDownTermen2.Value;
 
-            if ((termen1 >= 0 && termen1 < 1000001) && (termen2 >= 0 && termen2 < 1000001)) { 
             decimal rezultat = termen1 + termen2;
             textBoxRezultat.Text = rezultat.ToString();
-            }
-            else
-            {
-                string message = "Valorile acceptate sunt de la 0 la 1000000";
-                string title = "Valori acceptate";
-                MessageBox.Show(message, title);
-            }
 
         }
 
@@ -58,8 +50,17 @@ namespace CalcApp
             decimal termen1 = numericUpDownTermen1.Value;
             decimal termen2 = numericUpDownTermen2.Value;
 
-            decimal rezultat = termen1 / termen2;
-            textBoxRezultat.Text = rezultat.ToString();
+            try
+            {
+                decimal rezultat = termen1 / termen2;
+                textBoxRezultat.Text = rezultat.ToString();
+            }
+            catch (Exception)
+            {
+                string message = "Do not divide by 0";
+                string title = "Divide by 0";
+                MessageBox.Show(message, title);
+            }
         }
     }
 }
