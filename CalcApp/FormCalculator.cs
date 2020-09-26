@@ -62,5 +62,14 @@ namespace CalcApp
                 MessageBox.Show(message, title);
             }
         }
+
+        private void FormCalculator_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void FormCalculator_Close(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

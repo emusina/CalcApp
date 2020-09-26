@@ -38,5 +38,14 @@ namespace CalcApp
             else
                 formCalculator.Visible = true;
         }
+
+        private void FormHomepage_Load(object sender, EventArgs e)
+        {
+            
+        }
+        private void FormHomepage_Close(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
